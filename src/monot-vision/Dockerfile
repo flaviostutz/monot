@@ -1,6 +1,5 @@
 FROM flaviostutz/opencv-x86
 
-ADD main.c /tmp
+ADD . /tmp
 
-RUN cd /tmp 
-    && cmake 
+RUN cd /tmp && ./build.sh
