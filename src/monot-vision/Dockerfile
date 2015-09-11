@@ -1,5 +1,7 @@
 FROM flaviostutz/opencv-x86
 
-ADD . /tmp
+ADD . /opt/monot-vision
 
-RUN cd /tmp && ./build.sh
+RUN cd /opt/monot-vision/src && ../build/compile.sh
+
+CMD [ "/opt/monot-vision/tmp/monot-vision" ]
