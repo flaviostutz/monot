@@ -7,6 +7,7 @@
 mqtt_tempconv::mqtt_tempconv(const char *id, const char *host, int port) : mosquittopp(id)
 {
 	int keepalive = 60;
+	printf("Initializing...\n");
 
 	/* Connect immediately. This could also be done by calling
 	 * mqtt_tempconv->connect(). */
@@ -46,4 +47,3 @@ void mqtt_tempconv::on_subscribe(int mid, int qos_count, const int *granted_qos)
 {
 	printf("Subscription succeeded.\n");
 }
-
