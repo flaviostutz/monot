@@ -1,23 +1,22 @@
-#include "temperature_conversion.h"
+#include <stdio.h>
+#include "Controller.h"
 
-int main(int argc, char *argv[])
-{
-	class mqtt_tempconv *tempconv;
-	int rc;
+int main(int argc, char *argv[]) {
+	// int rc;
 
-	mosqpp::lib_init();
+	printf("Initializing Monot Vision...\n");
 
-	tempconv = new mqtt_tempconv("tempconv", "localhost", 1883);
-	
-	while(1){
-		rc = tempconv->loop();
-		if(rc){
-			tempconv->reconnect();
-		}
+	class Controller* controller = new Controller("vision-controller", "localhost", 1883);
+
+	while(1) {
+		// rc = controller->loop();
+		// if(rc){
+		// 	controller->reconnect();
+		// }
+		controller->step();
 	}
 
-	mosqpp::lib_cleanup();
+	mosqpp::lib_cleanup();    // Mosquitto library cleanup
 
 	return 0;
 }
-

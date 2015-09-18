@@ -1,0 +1,1 @@
+/root/monot/src/monot-vision/src/CMakeFiles/monot-vision.dir
