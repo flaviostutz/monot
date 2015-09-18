@@ -6,7 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/root/monot/src/monot-vision/src/main2.cpp
+/root/monot/src/monot-vision/src/Controller.cpp
+iostream
+-
+cstdio
+-
+cstring
+-
+string.h
+-
+stdio.h
+-
+mosquittopp.h
+-
+Controller.h
+/root/monot/src/monot-vision/src/Controller.h
+FaceDetector.h
+/root/monot/src/monot-vision/src/FaceDetector.h
+
+/root/monot/src/monot-vision/src/Controller.h
+mosquittopp.h
+-
+
+/root/monot/src/monot-vision/src/FaceDetector.cpp
 opencv2/objdetect.hpp
 -
 opencv2/videoio.hpp
@@ -19,4 +41,6 @@ iostream
 -
 stdio.h
 -
+
+/root/monot/src/monot-vision/src/FaceDetector.h
 

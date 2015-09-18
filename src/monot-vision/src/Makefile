@@ -111,29 +111,77 @@ monot-vision/fast:
 	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/build
 .PHONY : monot-vision/fast
 
-main2.o: main2.cpp.o
-.PHONY : main2.o
+Controller.o: Controller.cpp.o
+.PHONY : Controller.o
 
 # target to build an object file
-main2.cpp.o:
-	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/main2.cpp.o
-.PHONY : main2.cpp.o
+Controller.cpp.o:
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/Controller.cpp.o
+.PHONY : Controller.cpp.o
 
-main2.i: main2.cpp.i
-.PHONY : main2.i
+Controller.i: Controller.cpp.i
+.PHONY : Controller.i
 
 # target to preprocess a source file
-main2.cpp.i:
-	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/main2.cpp.i
-.PHONY : main2.cpp.i
+Controller.cpp.i:
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/Controller.cpp.i
+.PHONY : Controller.cpp.i
 
-main2.s: main2.cpp.s
-.PHONY : main2.s
+Controller.s: Controller.cpp.s
+.PHONY : Controller.s
 
 # target to generate assembly for a file
-main2.cpp.s:
-	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/main2.cpp.s
-.PHONY : main2.cpp.s
+Controller.cpp.s:
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/Controller.cpp.s
+.PHONY : Controller.cpp.s
+
+FaceDetector.o: FaceDetector.cpp.o
+.PHONY : FaceDetector.o
+
+# target to build an object file
+FaceDetector.cpp.o:
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/FaceDetector.cpp.o
+.PHONY : FaceDetector.cpp.o
+
+FaceDetector.i: FaceDetector.cpp.i
+.PHONY : FaceDetector.i
+
+# target to preprocess a source file
+FaceDetector.cpp.i:
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/FaceDetector.cpp.i
+.PHONY : FaceDetector.cpp.i
+
+FaceDetector.s: FaceDetector.cpp.s
+.PHONY : FaceDetector.s
+
+# target to generate assembly for a file
+FaceDetector.cpp.s:
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/FaceDetector.cpp.s
+.PHONY : FaceDetector.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -144,9 +192,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... monot-vision"
 	@echo "... rebuild_cache"
-	@echo "... main2.o"
-	@echo "... main2.i"
-	@echo "... main2.s"
+	@echo "... Controller.o"
+	@echo "... Controller.i"
+	@echo "... Controller.s"
+	@echo "... FaceDetector.o"
+	@echo "... FaceDetector.i"
+	@echo "... FaceDetector.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

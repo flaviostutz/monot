@@ -1,6 +1,8 @@
 #include <mosquittopp.h>
 
-class Controller : public mosqpp::mosquittopp {
+class Controller : public mosquittopp::mosquittopp {
+	private:
+		class FaceDetector* faceDetector;
 	public:
 		Controller(const char *id, const char *host, int port);
 		~Controller();

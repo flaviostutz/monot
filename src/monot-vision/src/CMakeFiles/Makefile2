@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /root/monot/src/monot-vision/src
 CMakeFiles/monot-vision.dir/all:
 	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/depend
 	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/monot/src/monot-vision/src/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/monot/src/monot-vision/src/CMakeFiles  1 2 3
 	@echo "Built target monot-vision"
 .PHONY : CMakeFiles/monot-vision.dir/all
 
@@ -69,7 +69,7 @@ all: CMakeFiles/monot-vision.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/monot-vision.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/monot/src/monot-vision/src/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/monot/src/monot-vision/src/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/monot-vision.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/monot/src/monot-vision/src/CMakeFiles 0
 .PHONY : CMakeFiles/monot-vision.dir/rule

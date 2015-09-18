@@ -16,7 +16,5 @@ int main(int argc, char *argv[]) {
 		controller->step();
 	}
 
-	mosqpp::lib_cleanup();    // Mosquitto library cleanup
-
 	return 0;
 }

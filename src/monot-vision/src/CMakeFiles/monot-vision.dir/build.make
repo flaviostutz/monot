@@ -49,37 +49,87 @@ include CMakeFiles/monot-vision.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/monot-vision.dir/flags.make
 
-CMakeFiles/monot-vision.dir/main2.cpp.o: CMakeFiles/monot-vision.dir/flags.make
-CMakeFiles/monot-vision.dir/main2.cpp.o: main2.cpp
+CMakeFiles/monot-vision.dir/main.cpp.o: CMakeFiles/monot-vision.dir/flags.make
+CMakeFiles/monot-vision.dir/main.cpp.o: main.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /root/monot/src/monot-vision/src/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/monot-vision.dir/main2.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/monot-vision.dir/main2.cpp.o -c /root/monot/src/monot-vision/src/main2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/monot-vision.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/monot-vision.dir/main.cpp.o -c /root/monot/src/monot-vision/src/main.cpp
 
-CMakeFiles/monot-vision.dir/main2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monot-vision.dir/main2.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/monot/src/monot-vision/src/main2.cpp > CMakeFiles/monot-vision.dir/main2.cpp.i
+CMakeFiles/monot-vision.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monot-vision.dir/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/monot/src/monot-vision/src/main.cpp > CMakeFiles/monot-vision.dir/main.cpp.i
 
-CMakeFiles/monot-vision.dir/main2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monot-vision.dir/main2.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/monot/src/monot-vision/src/main2.cpp -o CMakeFiles/monot-vision.dir/main2.cpp.s
+CMakeFiles/monot-vision.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monot-vision.dir/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/monot/src/monot-vision/src/main.cpp -o CMakeFiles/monot-vision.dir/main.cpp.s
 
-CMakeFiles/monot-vision.dir/main2.cpp.o.requires:
-.PHONY : CMakeFiles/monot-vision.dir/main2.cpp.o.requires
+CMakeFiles/monot-vision.dir/main.cpp.o.requires:
+.PHONY : CMakeFiles/monot-vision.dir/main.cpp.o.requires
 
-CMakeFiles/monot-vision.dir/main2.cpp.o.provides: CMakeFiles/monot-vision.dir/main2.cpp.o.requires
-	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/main2.cpp.o.provides.build
-.PHONY : CMakeFiles/monot-vision.dir/main2.cpp.o.provides
+CMakeFiles/monot-vision.dir/main.cpp.o.provides: CMakeFiles/monot-vision.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/monot-vision.dir/main.cpp.o.provides
 
-CMakeFiles/monot-vision.dir/main2.cpp.o.provides.build: CMakeFiles/monot-vision.dir/main2.cpp.o
+CMakeFiles/monot-vision.dir/main.cpp.o.provides.build: CMakeFiles/monot-vision.dir/main.cpp.o
+
+CMakeFiles/monot-vision.dir/Controller.cpp.o: CMakeFiles/monot-vision.dir/flags.make
+CMakeFiles/monot-vision.dir/Controller.cpp.o: Controller.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/monot/src/monot-vision/src/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/monot-vision.dir/Controller.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/monot-vision.dir/Controller.cpp.o -c /root/monot/src/monot-vision/src/Controller.cpp
+
+CMakeFiles/monot-vision.dir/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monot-vision.dir/Controller.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/monot/src/monot-vision/src/Controller.cpp > CMakeFiles/monot-vision.dir/Controller.cpp.i
+
+CMakeFiles/monot-vision.dir/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monot-vision.dir/Controller.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/monot/src/monot-vision/src/Controller.cpp -o CMakeFiles/monot-vision.dir/Controller.cpp.s
+
+CMakeFiles/monot-vision.dir/Controller.cpp.o.requires:
+.PHONY : CMakeFiles/monot-vision.dir/Controller.cpp.o.requires
+
+CMakeFiles/monot-vision.dir/Controller.cpp.o.provides: CMakeFiles/monot-vision.dir/Controller.cpp.o.requires
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/Controller.cpp.o.provides.build
+.PHONY : CMakeFiles/monot-vision.dir/Controller.cpp.o.provides
+
+CMakeFiles/monot-vision.dir/Controller.cpp.o.provides.build: CMakeFiles/monot-vision.dir/Controller.cpp.o
+
+CMakeFiles/monot-vision.dir/FaceDetector.cpp.o: CMakeFiles/monot-vision.dir/flags.make
+CMakeFiles/monot-vision.dir/FaceDetector.cpp.o: FaceDetector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/monot/src/monot-vision/src/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/monot-vision.dir/FaceDetector.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/monot-vision.dir/FaceDetector.cpp.o -c /root/monot/src/monot-vision/src/FaceDetector.cpp
+
+CMakeFiles/monot-vision.dir/FaceDetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monot-vision.dir/FaceDetector.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/monot/src/monot-vision/src/FaceDetector.cpp > CMakeFiles/monot-vision.dir/FaceDetector.cpp.i
+
+CMakeFiles/monot-vision.dir/FaceDetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monot-vision.dir/FaceDetector.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/monot/src/monot-vision/src/FaceDetector.cpp -o CMakeFiles/monot-vision.dir/FaceDetector.cpp.s
+
+CMakeFiles/monot-vision.dir/FaceDetector.cpp.o.requires:
+.PHONY : CMakeFiles/monot-vision.dir/FaceDetector.cpp.o.requires
+
+CMakeFiles/monot-vision.dir/FaceDetector.cpp.o.provides: CMakeFiles/monot-vision.dir/FaceDetector.cpp.o.requires
+	$(MAKE) -f CMakeFiles/monot-vision.dir/build.make CMakeFiles/monot-vision.dir/FaceDetector.cpp.o.provides.build
+.PHONY : CMakeFiles/monot-vision.dir/FaceDetector.cpp.o.provides
+
+CMakeFiles/monot-vision.dir/FaceDetector.cpp.o.provides.build: CMakeFiles/monot-vision.dir/FaceDetector.cpp.o
 
 # Object files for target monot-vision
 monot__vision_OBJECTS = \
-"CMakeFiles/monot-vision.dir/main2.cpp.o"
+"CMakeFiles/monot-vision.dir/main.cpp.o" \
+"CMakeFiles/monot-vision.dir/Controller.cpp.o" \
+"CMakeFiles/monot-vision.dir/FaceDetector.cpp.o"
 
 # External object files for target monot-vision
 monot__vision_EXTERNAL_OBJECTS =
 
-monot-vision: CMakeFiles/monot-vision.dir/main2.cpp.o
+monot-vision: CMakeFiles/monot-vision.dir/main.cpp.o
+monot-vision: CMakeFiles/monot-vision.dir/Controller.cpp.o
+monot-vision: CMakeFiles/monot-vision.dir/FaceDetector.cpp.o
 monot-vision: CMakeFiles/monot-vision.dir/build.make
 monot-vision: /usr/local/lib/libopencv_videostab.so.3.0.0
 monot-vision: /usr/local/lib/libopencv_videoio.so.3.0.0
@@ -123,7 +173,9 @@ monot-vision: CMakeFiles/monot-vision.dir/link.txt
 CMakeFiles/monot-vision.dir/build: monot-vision
 .PHONY : CMakeFiles/monot-vision.dir/build
 
-CMakeFiles/monot-vision.dir/requires: CMakeFiles/monot-vision.dir/main2.cpp.o.requires
+CMakeFiles/monot-vision.dir/requires: CMakeFiles/monot-vision.dir/main.cpp.o.requires
+CMakeFiles/monot-vision.dir/requires: CMakeFiles/monot-vision.dir/Controller.cpp.o.requires
+CMakeFiles/monot-vision.dir/requires: CMakeFiles/monot-vision.dir/FaceDetector.cpp.o.requires
 .PHONY : CMakeFiles/monot-vision.dir/requires
 
 CMakeFiles/monot-vision.dir/clean:

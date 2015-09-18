@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/monot-vision.dir/main2.cpp.o"
+  "CMakeFiles/monot-vision.dir/main.cpp.o"
+  "CMakeFiles/monot-vision.dir/Controller.cpp.o"
+  "CMakeFiles/monot-vision.dir/FaceDetector.cpp.o"
   "monot-vision.pdb"
   "monot-vision"
 )

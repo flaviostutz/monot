@@ -4,7 +4,9 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/root/monot/src/monot-vision/src/main2.cpp" "/root/monot/src/monot-vision/src/CMakeFiles/monot-vision.dir/main2.cpp.o"
+  "/root/monot/src/monot-vision/src/Controller.cpp" "/root/monot/src/monot-vision/src/CMakeFiles/monot-vision.dir/Controller.cpp.o"
+  "/root/monot/src/monot-vision/src/FaceDetector.cpp" "/root/monot/src/monot-vision/src/CMakeFiles/monot-vision.dir/FaceDetector.cpp.o"
+  "/root/monot/src/monot-vision/src/main.cpp" "/root/monot/src/monot-vision/src/CMakeFiles/monot-vision.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

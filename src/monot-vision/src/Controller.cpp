@@ -1,20 +1,30 @@
+#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include <string.h>
+#include <stdio.h>
 
-#include "Controller.h"
 #include <mosquittopp.h>
+#include "Controller.h"
+#include "FaceDetector.h"
+
+using namespace std;
+using namespace cv;
 
 Controller::Controller(const char* id, const char* host, int port) : mosquittopp(id) {
 	printf("Initializing MQTT connections...\n");
-	mosqpp::lib_init();        // Mandatory initialization for mosquitto library
+	mosquittopp::lib_init();        // Mandatory initialization for mosquitto library
 	connect_async(host,	port,	60); //keepalive interval
 	loop_start();            // Start thread managing connection / publish / subscribe
+
+	faceDetector = new FaceDetector();
+	faceDetector.start_detector(-1, Size(200,200));
 };
 
 void Controller::step() {
 	//send vision data to mqtt
-	//parei aqui
+	std::vector<Rect> faces = faceDetector.detect_faces();
+	faceDetector.displayLastResult();
 }
 
 void Controller::on_connect(int rc) {
@@ -66,6 +76,7 @@ void Controller::on_disconnect(int rc) {
 }
 
 Controller::~Controller() {
+	faceDetector.stop_detector();
 	loop_stop();            // Kill the thread
-  mosqpp::lib_cleanup();    // Mosquitto library cleanup
+  mosquittopp::lib_cleanup();    // Mosquitto library cleanup
 }
