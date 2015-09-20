@@ -7,13 +7,34 @@ Controller::Controller(const char* id, const char* host, int port) : mosquittopp
 	connect_async(host,	port,	60); //keepalive interval
 
 	faceDetector = new FaceDetector();
-	faceDetector->start_detector(-1, *new Size(200,200));
+	faceDetector->start_detector(-1, *new Size(240,180));
+//	faceDetector->start_detector(-1, *new Size(120,90));
 };
 
 void Controller::step() {
 	//send vision data to mqtt
 	std::vector<Rect> faces = faceDetector->detect_faces();
+	printf("Faces detected: %zu.\n", faces.size());
+
 	faceDetector->displayLastResult();
+
+	//publish detection data to mqtt topic
+
+	//format faces data part
+	char facesStr[faces.size() * 50];
+	sprintf(facesStr, " ");
+	char comma[1];
+	for (size_t i = 0; i < faces.size(); i++) {
+		if(i+1<faces.size()) comma[0]=',';
+		else comma[0]=' ';
+		sprintf(facesStr, "%s {\"x\":%d, \"y\":%d, \"width\":%d, \"height\":%d}%s", facesStr, faces[i].x, faces[i].y, faces[i].width, faces[i].height, comma);
+	}
+
+	//format overall message data
+	char message[faces.size() * 50 + 50];
+	sprintf(message, "{\"facesCount\":%zu, \"detectedFaces\":[%s]}", faces.size(), facesStr);
+
+	send_message("agents/monot-vision/sensor-facedetector", message);
 }
 
 void Controller::on_connect(int rc) {
@@ -48,6 +69,7 @@ bool Controller::send_message(const char* topic, const char* message) {
 	// * qos (0,1,2)
 	// * retain (boolean) - indicates if message is retained on broker or not
 	// Should return MOSQ_ERR_SUCCESS
+	printf("Publishing MQTT message. topic=%s; message=%s\n", topic, message);
 	int ret = publish(NULL,topic,strlen(message),message,1,true);
 	return (ret == MOSQ_ERR_SUCCESS);
 }
@@ -57,7 +79,7 @@ void Controller::on_subscribe(int mid, int qos_count, const int *granted_qos) {
 }
 
 void Controller::on_publish(int mid) {
-	printf("Published. %d\n", mid);
+	printf("Published message %d\n", mid);
 }
 
 void Controller::on_disconnect(int rc) {

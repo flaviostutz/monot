@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "Controller.h"
 
 int main(int argc, char *argv[]) {
@@ -14,6 +15,8 @@ int main(int argc, char *argv[]) {
 			// controller->reconnect();
 		// }
 		controller->step();
+
+		//usleep(100000);
 	}
 
 	return 0;

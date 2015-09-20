@@ -45,9 +45,12 @@ void FaceDetector::stop_detector() {
 }
 
 void FaceDetector::displayLastResult() {
+//  printf("Showing detection results window\n");
   for (size_t i = 0; i < this->faces.size(); i++) {
-    Point center(faces[i].x + faces[i].width/2, faces[i].y + faces[i].height/2);
-    ellipse(frame, center, Size(faces[i].width/2, faces[i].height/2), 0, 0, 360, Scalar(255, 0, 255), 4, 8, 0);
+    Point center(this->faces[i].x + this->faces[i].width/2, this->faces[i].y + this->faces[i].height/2);
+    ellipse(this->frame, center, Size(this->faces[i].width/2, this->faces[i].height/2), 0, 0, 360, Scalar(255, 0, 255), 4, 8, 0);
   }
-  imshow("Last result", frame);
+  imshow("Last result", this->frame);
+  //without this the screen doesn't show
+  waitKey(10);
 }
