@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #rm -R tmp
-mkdir tmp
-cd tmp
-cmake ../.
+#mkdir tmp
+cd ../src
+cmake .
 make

@@ -1,6 +1,19 @@
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <string.h>
+#include <stdio.h>
+
+#include <mosquitto.h>
+#include <mosquittopp.h>
+#include "FaceDetector.h"
+
+using namespace std;
+using namespace cv;
+
 #include <mosquittopp.h>
 
-class Controller : public mosquittopp::mosquittopp {
+class Controller : public mosqpp::mosquittopp {
 	private:
 		class FaceDetector* faceDetector;
 	public:

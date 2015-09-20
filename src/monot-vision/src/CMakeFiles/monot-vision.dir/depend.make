@@ -6,7 +6,9 @@ CMakeFiles/monot-vision.dir/Controller.cpp.o: Controller.h
 CMakeFiles/monot-vision.dir/Controller.cpp.o: FaceDetector.h
 
 CMakeFiles/monot-vision.dir/FaceDetector.cpp.o: FaceDetector.cpp
+CMakeFiles/monot-vision.dir/FaceDetector.cpp.o: FaceDetector.h
 
 CMakeFiles/monot-vision.dir/main.cpp.o: Controller.h
+CMakeFiles/monot-vision.dir/main.cpp.o: FaceDetector.h
 CMakeFiles/monot-vision.dir/main.cpp.o: main.cpp
 

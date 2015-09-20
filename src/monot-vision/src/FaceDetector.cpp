@@ -1,20 +1,11 @@
-#include <opencv2/objdetect.hpp>
-#include <opencv2/videoio.hpp>
-#include <opencv2/highgui.hpp>
-#include <opencv2/imgproc.hpp>
-
-#include <iostream>
-#include <stdio.h>
-
-using namespace std;
-using namespace cv;
+#include "FaceDetector.h"
 
 FaceDetector::FaceDetector() {
 };
 FaceDetector::~FaceDetector() {
 };
 
-int FaceDetector::start_detector(int videoDeviceNumber, Size imageSize) {
+void FaceDetector::start_detector(int videoDeviceNumber, cv::Size imageSize) {
   this->imageSize = imageSize;
   if(!faceCascade.load("haarcascade_frontalface_default.xml")) {
     printf("Error loading face cascade\n");
@@ -40,7 +31,7 @@ std::vector<Rect> FaceDetector::detect_faces() {
     resize(frame, frame, this->imageSize);
     equalizeHist(frame, this->frame);
 
-    face_cascade.detectMultiScale(this->frame, faces, 1.1, 2, 0|CASCADE_SCALE_IMAGE, Size(30, 30));
+    faceCascade.detectMultiScale(this->frame, faces, 1.1, 2, 0|CASCADE_SCALE_IMAGE, *new Size(30, 30));
     return faces;
 
   } else {
@@ -50,11 +41,11 @@ std::vector<Rect> FaceDetector::detect_faces() {
 }
 
 void FaceDetector::stop_detector() {
-  this->capture.close();
+  this->capture.release();
 }
 
-void displayLastResult() {
-  for (size_t i = 0; i < faces.size(); i++) {
+void FaceDetector::displayLastResult() {
+  for (size_t i = 0; i < this->faces.size(); i++) {
     Point center(faces[i].x + faces[i].width/2, faces[i].y + faces[i].height/2);
     ellipse(frame, center, Size(faces[i].width/2, faces[i].height/2), 0, 0, 360, Scalar(255, 0, 255), 4, 8, 0);
   }
